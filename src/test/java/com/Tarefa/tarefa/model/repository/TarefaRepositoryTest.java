@@ -26,6 +26,20 @@ public class TarefaRepositoryTest {
 	
 	
 	
+	public TestEntityManager getEntityManager() {
+		return entityManager;
+	}
+
+
+
+
+	public void setEntityManager(TestEntityManager entityManager) {
+		this.entityManager = entityManager;
+	}
+
+
+
+
 	@Test
 	public void devePersistirUmUsuarioNaBaseDeDados() {
 		//cenario
