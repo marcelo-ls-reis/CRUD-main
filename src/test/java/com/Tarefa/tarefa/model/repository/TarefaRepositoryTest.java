@@ -2,8 +2,6 @@ package com.Tarefa.tarefa.model.repository;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Optional;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +32,7 @@ public class TarefaRepositoryTest {
 		Tarefa tarefa = criarTarefa();
 		
 		//ação
-		Tarefa tarefaSalvo = repository.save(tarefa);
+		Tarefa tarefaSalvo = entityManager.persist(tarefa);
 		
 		//verificação
 		Assertions.assertThat(tarefaSalvo.getId()).isNotNull();

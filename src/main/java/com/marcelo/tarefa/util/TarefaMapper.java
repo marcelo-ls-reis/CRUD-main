@@ -15,7 +15,7 @@ public class TarefaMapper {
     public Tarefa toPerson(TarefaRequestDTO personDTO) {
 
         return Tarefa.builder()
-                .nome(personDTO.getName())
+                .nome(personDTO.getNome())
                 .descricao(personDTO.getDescricao())
                 .status(personDTO.getStatus())
                 .observacao(personDTO.getObservacao())
@@ -35,7 +35,7 @@ public class TarefaMapper {
 
     public void updatePersonData(Tarefa tarefa, TarefaRequestDTO personDTO) {
 
-        tarefa.setNome(personDTO.getName());
+        tarefa.setNome(personDTO.getNome());
         tarefa.setDescricao(personDTO.getDescricao());
         tarefa.setStatus(personDTO.getStatus());
         tarefa.setObservacao(personDTO.getObservacao());

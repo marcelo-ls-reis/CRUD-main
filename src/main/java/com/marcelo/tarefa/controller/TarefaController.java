@@ -13,7 +13,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/people")
+@RequestMapping(value = "/tarefa")
 @RequiredArgsConstructor
 public class TarefaController {
 
@@ -34,7 +34,7 @@ public class TarefaController {
 
         TarefaResponseDTO tarefaResponseDTO = tarefaService.register(tarefaRequestDTO);
 
-        URI uri = uriBuilder.path("/people/{id}").buildAndExpand(tarefaResponseDTO.getId()).toUri();
+        URI uri = uriBuilder.path("/tarefa/{id}").buildAndExpand(tarefaResponseDTO.getId()).toUri();
 
       return ResponseEntity.created(uri).body(tarefaResponseDTO);
     }
