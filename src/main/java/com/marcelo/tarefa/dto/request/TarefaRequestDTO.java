@@ -9,7 +9,7 @@ public class TarefaRequestDTO {
 
     private String status;
     
-    private String observacao;
+    private String observacoes;
     
     private String data_criacao;
     
@@ -39,12 +39,12 @@ public class TarefaRequestDTO {
 		this.status = status;
 	}
 
-	public String getObservacao() {
-		return observacao;
+	public String getObservacoes() {
+		return observacoes;
 	}
 
 	public void setObservacao(String observacao) {
-		this.observacao = observacao;
+		this.observacoes = observacao;
 	}
 
 	public String getData_criacao() {

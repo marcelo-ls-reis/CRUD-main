@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 @Primary
 @RequiredArgsConstructor
-public class PersonServiceImpl implements TarefaService {
+public class TarefaServiceImpl implements TarefaService {
 
     private final TarefaRepository tarefaRepository;
 

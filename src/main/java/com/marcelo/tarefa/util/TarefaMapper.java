@@ -18,7 +18,7 @@ public class TarefaMapper {
                 .nome(personDTO.getNome())
                 .descricao(personDTO.getDescricao())
                 .status(personDTO.getStatus())
-                .observacao(personDTO.getObservacao())
+                .observacoes(personDTO.getObservacoes())
                 .data_criacao(personDTO.getData_criacao())
                 .data_atualizacao(personDTO.getData_atualizacao())
                 .build();
@@ -38,7 +38,7 @@ public class TarefaMapper {
         tarefa.setNome(personDTO.getNome());
         tarefa.setDescricao(personDTO.getDescricao());
         tarefa.setStatus(personDTO.getStatus());
-        tarefa.setObservacao(personDTO.getObservacao());
+        tarefa.setObservacoes(personDTO.getObservacoes());
         tarefa.setData_criacao(personDTO.getData_criacao());
         tarefa.setData_atualizacao(personDTO.getData_atualizacao());
 

@@ -18,6 +18,7 @@ import com.marcelo.tarefa.entity.Tarefa;
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @ExtendWith(SpringExtension.class)
 @ActiveProfiles("test")
+
 public class TarefaRepositoryTest {
 	
 
@@ -61,7 +62,7 @@ public class TarefaRepositoryTest {
 				.nome("Tarefa Xandão")
 				.descricao("Criar CRUD com spring boot")
 				.status("em execução")
-				.observacao("muito dificil")
+				.observacoes("muito dificil")
 				.data_criacao("10/04/2024")
 				.data_atualizacao("15/04/2024")
 				.build();

@@ -16,7 +16,7 @@ public class TarefaResponseDTO {
 
     private String status;
     
-    private String observacao;
+    private String observacoes;
 
     private String data_criacao;
 
@@ -27,7 +27,7 @@ public class TarefaResponseDTO {
         this.name = tarefa.getNome();
         this.descricao = tarefa.getDescricao();
         this.status = tarefa.getStatus();
-        this.observacao = tarefa.getObservacao();
+        this.observacoes = tarefa.getObservacoes();
         this.data_criacao = tarefa.getData_criacao();
         this.data_atualizacao = tarefa.getData_atualizacao();
     }

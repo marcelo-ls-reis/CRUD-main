@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "tarefas")
+@Table(name = "tarefa")
 @NoArgsConstructor
 @Getter
 @Setter
@@ -25,8 +25,8 @@ public class Tarefa {
     @Column(name = "status", nullable = false)
     private String status;
     
-    @Column(name = "observacao", nullable = false)
-    private String observacao;
+    @Column(name = "observacoes", nullable = false)
+    private String observacoes;
     
     @Column(name = "data_criacao", nullable = false)
     private String data_criacao;
@@ -35,11 +35,11 @@ public class Tarefa {
     private String data_atualizacao;
 
     @Builder
-    public Tarefa(String nome, String descricao, String status, String observacao, String data_criacao, String data_atualizacao) {
+    public Tarefa(String nome, String descricao, String status, String observacoes, String data_criacao, String data_atualizacao) {
         this.nome = nome;
         this.descricao = descricao;
         this.status = status;
-        this.observacao = observacao;
+        this.observacoes = observacoes;
         this.data_criacao = data_criacao;
         this.data_atualizacao = data_atualizacao;
     }
