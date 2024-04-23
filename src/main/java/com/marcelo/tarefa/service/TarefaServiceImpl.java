@@ -24,7 +24,7 @@ public class TarefaServiceImpl implements TarefaService {
 
     @Override
     public TarefaResponseDTO findById(Long id) {
-     return tarefaMapper.toPersonDTO(returnPerson(id));
+     return tarefaMapper.toTarefaDTO(returnTarefa(id));
     }
 
     @Override
@@ -33,21 +33,21 @@ public class TarefaServiceImpl implements TarefaService {
     }
 
     @Override
-    public TarefaResponseDTO register(TarefaRequestDTO personDTO) {
+    public TarefaResponseDTO register(TarefaRequestDTO tarefaDTO) {
 
-        Tarefa tarefa = tarefaMapper.toPerson(personDTO);
+        Tarefa tarefa = tarefaMapper.toTarefa(tarefaDTO);
 
-        return tarefaMapper.toPersonDTO(tarefaRepository.save(tarefa));
+        return tarefaMapper.toTarefaDTO(tarefaRepository.save(tarefa));
     }
 
     @Override
-    public TarefaResponseDTO update(Long id, TarefaRequestDTO personDTO) {
+    public TarefaResponseDTO update(Long id, TarefaRequestDTO tarefaDTO) {
 
-        Tarefa tarefa = returnPerson(id);
+        Tarefa tarefa = returnTarefa(id);
 
-        tarefaMapper.updatePersonData(tarefa,personDTO);
+        tarefaMapper.updateTarefaData(tarefa,tarefaDTO);
 
-        return tarefaMapper.toPersonDTO(tarefaRepository.save(tarefa));
+        return tarefaMapper.toTarefaDTO(tarefaRepository.save(tarefa));
     }
 
     @Override
@@ -56,7 +56,7 @@ public class TarefaServiceImpl implements TarefaService {
         return "Tarefa id: "+id+" deleted";
     }
 
-    private Tarefa returnPerson(Long id) {
+    private Tarefa returnTarefa(Long id) {
        return tarefaRepository.findById(id)
                .orElseThrow(()-> new RuntimeException("Tarefa não existe no database"));
     }

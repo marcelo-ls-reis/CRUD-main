@@ -12,20 +12,20 @@ import java.util.stream.Collectors;
 @Component
 public class TarefaMapper {
 
-    public Tarefa toPerson(TarefaRequestDTO personDTO) {
+    public Tarefa toTarefa(TarefaRequestDTO tarefaDTO) {
 
         return Tarefa.builder()
-                .nome(personDTO.getNome())
-                .descricao(personDTO.getDescricao())
-                .status(personDTO.getStatus())
-                .observacoes(personDTO.getObservacoes())
-                .data_criacao(personDTO.getData_criacao())
-                .data_atualizacao(personDTO.getData_atualizacao())
+                .nome(tarefaDTO.getNome())
+                .descricao(tarefaDTO.getDescricao())
+                .status(tarefaDTO.getStatus())
+                .observacoes(tarefaDTO.getObservacoes())
+                .data_criacao(tarefaDTO.getData_criacao())
+                .data_atualizacao(tarefaDTO.getData_atualizacao())
                 .build();
 
     }
 
-    public TarefaResponseDTO toPersonDTO(Tarefa tarefa) {
+    public TarefaResponseDTO toTarefaDTO(Tarefa tarefa) {
         return new TarefaResponseDTO(tarefa);
     }
 
@@ -33,15 +33,16 @@ public class TarefaMapper {
         return peopleList.stream().map(TarefaResponseDTO::new).collect(Collectors.toList());
     }
 
-    public void updatePersonData(Tarefa tarefa, TarefaRequestDTO personDTO) {
+    public void updateTarefaData(Tarefa tarefa, TarefaRequestDTO tarefaDTO) {
 
-        tarefa.setNome(personDTO.getNome());
-        tarefa.setDescricao(personDTO.getDescricao());
-        tarefa.setStatus(personDTO.getStatus());
-        tarefa.setObservacoes(personDTO.getObservacoes());
-        tarefa.setData_criacao(personDTO.getData_criacao());
-        tarefa.setData_atualizacao(personDTO.getData_atualizacao());
+        tarefa.setNome(tarefaDTO.getNome());
+        tarefa.setDescricao(tarefaDTO.getDescricao());
+        tarefa.setStatus(tarefaDTO.getStatus());
+        tarefa.setObservacoes(tarefaDTO.getObservacoes());
+        tarefa.setData_criacao(tarefaDTO.getData_criacao());
+        tarefa.setData_atualizacao(tarefaDTO.getData_atualizacao());
 
     }
+
 
 }

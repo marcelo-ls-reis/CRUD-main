@@ -39,8 +39,6 @@ public class TarefaRepositoryTest {
 	}
 
 
-
-
 	@Test
 	public void devePersistirUmUsuarioNaBaseDeDados() {
 		//cenario
